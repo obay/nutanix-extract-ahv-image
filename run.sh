@@ -20,7 +20,6 @@ NFSFILE_PATH=`curl -s --insecure --user "$PRISM_USERNAME:$PRISM_PASSWORD" --requ
 # Build the command to run
 COMMAND="/usr/local/nutanix/bin/qemu-img convert -c -p nfs://127.0.0.1$NFSFILE_PATH -O qcow2 nfs://127.0.0.1/$TARGET_STORAGE_CONTAINER/$GOLDEN_IMAGE_NAME.qcow2"
 
-# /usr/local/nutanix/bin/qemu-img convert -c -p nfs://127.0.0.1/kafka_data/.acropolis/vmdisk/99791631-b826-47ac-90a0-a82f5c03389f -O qcow2 nfs://127.0.0.1/default-container-65802440092108/Windows_10_Golden_Image.qcow2
 # Run the command on the CVM
 sshpass -p $CVM_PASSWORD ssh -o "StrictHostKeyChecking=no" $CVM_USERNAME@$PRISM_IP $COMMAND
 
