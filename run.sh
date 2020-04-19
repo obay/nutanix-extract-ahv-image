@@ -28,4 +28,4 @@ URL="nfs://$PRISM_IP/$TARGET_STORAGE_CONTAINER/$GOLDEN_IMAGE_NAME.qcow2"
 echo "Please use the following URL to upload the image to Prism Central:"
 echo $URL
 
-# To-Do: Delete the image from th NFS share
+# To-Do: Delete the image from the NFS share
